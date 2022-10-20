@@ -1,9 +1,0 @@
-input {
-    border: 0;
-    padding: 6px;
-}
-
-input[type=time]:focus {
-    border: 0;
-    outline: 0;
-}
