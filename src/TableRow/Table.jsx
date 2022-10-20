@@ -13,11 +13,12 @@ export const BasicTable = ({ editableMode, data = [], children, setData }) => {
     if (!data) return null;
 
     const onRemoveCell = (removedId) => {
-        setData({...data, data: data.data.filter(el => el.id !== removedId)})
+        setData({...data, data: data?.data.filter(el => el.id !== removedId)})
     }
 
     const updateDataFields = (updateEl) => {
-        const newData = data.data.map(element => element.id === updateEl.id ? updateEl : element);
+        console.log(data, 'DATA')
+        const newData = data?.data.map(element => element.id === updateEl.id ? updateEl : element);
         setData({...data, data: newData});
     }
 
@@ -42,7 +43,7 @@ export const BasicTable = ({ editableMode, data = [], children, setData }) => {
     }
     return (
         <>
-            {data.data.length ?
+            {data?.data?.length ?
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 200, padding: 0 }} aria-label="simple table" className='table-wrapper' stickyHeader>
                         <TableHead>

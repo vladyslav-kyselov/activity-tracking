@@ -111,8 +111,9 @@ const createNewAimBlock = (newId, taskName) => {
 const createNewControlBlock = (newId, taskName) => createNewAimBlock(newId, taskName)
 
 const addNewElement = (taskName, data, setData, createNewBlock) => {
-    const newId = data.length ? data[data.length - 1]?.id + 1 : 1;
-    setData([...data, createNewBlock(newId, taskName)])
+    const array = data.data;
+    const newId = array.length ? array[array.length - 1]?.id + 1 : 1;
+    setData({...data, data: [...array, createNewBlock(newId, taskName)]})
 }
 
 export const useGetData = () => {
