@@ -1,0 +1,21 @@
+.app-bar__logo {
+    display: flex;
+    align-items: center;
+}
+
+.app-bar__logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-bar__user-name {
+    text-align: center;
+    color: white;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.app-bar__user-email {
+    font-size: 20px;
+    display: none;
+}
