@@ -1,0 +1,7 @@
+.divider-text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+}
